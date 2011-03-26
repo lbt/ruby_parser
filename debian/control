@@ -1,0 +1,39 @@
+Source: ruby-parser
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders:  <>
+DM-Upload-Allowed: yes
+Build-Depends: debhelper (>= 7.0.50~), gem2deb (>= 0.1.0)
+Standards-Version: 3.9.1
+#Vcs-Git: git://git.debian.org/collab-maint/libnet-jabber-loudmouth-perl.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/libnet-jabber-loudmouth-perl.git;a=summary
+Homepage: http://parsetree.rubyforge.org/
+
+Package: ruby-parser
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+# sexp_processor (~> 3.0), racc (~> 1.4.7), minitest (>= 2.0.2), ParseTree (~> 3.0), hoe (>= 2.9.1)
+Description: ruby_parser (RP) is a ruby parser written in pure ruby (utilizing racc--which does by default use a C extension)
+ ruby_parser (RP) is a ruby parser written in pure ruby (utilizing
+ racc--which does by default use a C extension). RP's output is
+ the same as ParseTree's output: s-expressions using ruby's arrays and
+ base types.
+ .\n As an example:
+ .\n def conditional1(arg1)
+ if arg1 == 0 then
+ return 1
+ end
+ return 0
+ end
+ .\n becomes:
+ .\n s(:defn, :conditional1,
+ s(:args, :arg1),
+ s(:scope,
+ s(:block,
+ s(:if,
+ s(:call, s(:lvar, :arg1), :==, s(:arglist, s(:lit, 0))),
+ s(:return, s(:lit, 1)),
+ nil),
+ s(:return, s(:lit, 0)))))
+
