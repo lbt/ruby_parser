@@ -1,3 +1,9 @@
+ruby-ruby-parser (2.0.6-4) unstable; urgency=low
+
+  * Build depend on racc, rake and ruby-hoe
+
+ -- David Greaves <david@dgreaves.com>  Mon, 28 Mar 2011 14:48:39 +0100
+
 ruby-ruby-parser (2.0.6-1) UNRELEASED; urgency=low
 
   * Initial release based on gem2deb
