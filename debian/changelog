@@ -1,3 +1,9 @@
+ruby-ruby-parser (2.0.6-5) unstable; urgency=low
+
+  * Rebuild ruby_parser.rb from .y using racc
+
+ -- David Greaves <david@dgreaves.com>  Mon, 28 Mar 2011 18:40:13 +0100
+
 ruby-ruby-parser (2.0.6-4) unstable; urgency=low
 
   * Build depend on racc, rake and ruby-hoe
